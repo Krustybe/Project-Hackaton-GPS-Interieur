@@ -1,0 +1,84 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="141dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_scan_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scanner QR Code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+    <Spinner
+        android:id="@+id/spinner_depart"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_scan_qr" />
+
+
+    <ImageView
+        android:id="@+id/iv_arrow_down"
+        android:layout_width="26dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_arrow_downward_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_depart" />
+
+    <Spinner
+        android:id="@+id/spinner_destination"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_arrow_down" />
+
+    <ImageView
+        android:id="@+id/iv_compass"
+        android:layout_width="187dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_compass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_destination" />
+
+    <Button
+        android:id="@+id/btn_calculate_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculer le chemin"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="341dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_compass" />
+
+    <TextView
+        android:id="@+id/tv_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate_path" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
